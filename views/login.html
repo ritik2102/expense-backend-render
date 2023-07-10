@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../styles/login.css"> -->
+    <link rel="stylesheet" href="login.css">
+</head>
+<body class="login-body">
+    <h1>Expense Tracker</h1>
+    <div class="form-container">
+        <form class="login-form" method="POST" onsubmit="login(event)">
+            <div class="form-field">
+                <label for="email">Enter your email:</label><br>
+                <input class="form-input" id="email" type="email" required/><br>
+                <p class="login-message" >* User not found</p>
+            </div>
+            <div class="form-field">
+                <label for="password">Enter your password:</label><br>
+                <input class="form-input" id="password" type="password" required/><br>
+                <p class="password-message" >* Incorrect password</p>
+            </div>
+            <div class="form-field">
+                <button class="sign-in" type="submit">Log In</button>
+            </div>
+        </form>
+        <div class="sign-up-container">
+            <a href="signup.html"><p class="sign-up-link" > New User ? Sign up instead</p></a>
+            <a id="forget-link" href="reset.html">Forgot password?</a>
+        </div>
+    </div>
+    <div class="copyright">
+        <hr>
+        <p>@❤️ritikGangwar</p>
+    </div>
+    
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="login.js"></script>
+</body>
+</html>

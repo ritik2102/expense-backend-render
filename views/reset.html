@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="reset.css">
+</head>
+<body class="login-body">
+    <h1>Expense Tracker</h1>
+    <div class="form-container">
+        <form class="form" method="POST" onsubmit="login(event)">
+            <div class="form-field">
+                <label for="email">Enter your email:</label><br>
+                <input class="form-input" id="email" type="email" required/><br>
+                <p class="login-message" >* User not found</p>
+            </div>
+            <div class="form-field">
+                <button id="reset" class="sign-in" type="submit">Recover password </button>
+            </div>
+        </form>
+        <div class="sign-up-container">
+            <a href="signup.html"><p class="sign-up-link" > New User ? Sign up instead</p></a>
+            <h4 id="password-reset-sent" >Check you registered mail id for the reset password link</h4> 
+        </div>
+    </div>
+    <div class="copyright">
+        <hr>
+        <p>@❤️ritikGangwar</p>
+    </div>
+    
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="reset.js"></script>
+</body>
+</html>

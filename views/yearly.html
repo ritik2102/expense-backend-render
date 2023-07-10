@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="expenses.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img class="nav-image" src="money-sack.png" alt="Loading image" />
+                
+            <div class="nav-button">
+                <a class="header-link" href="expense-main.html">Home</a>
+            </div>
+            <div class="nav-button">
+                <a id="daily-header" class="header-link" href="daily.html">Daily</a>
+            </div>
+            <div class="nav-button">
+                <a id="monthly-header" class="header-link" href="monthly.html">Monthly</a>
+            </div>
+            <div class="nav-button">
+                <a id="yearly-header" class="header-link" href="yearly.html">Yearly</a>
+            </div>
+            <div class="nav-button">
+                <a id="razorpayBtn" class="header-link" href="">Buy premium</a>
+            </div>
+            <div class="nav-button">
+                <a class="header-link" id="leader-board" href="">Show leaderboard</a>
+            </div>
+            <div class="nav-button">
+                <a class="header-link" href="login.html">Logout</a>
+            </div>
+        </nav>
+    </header>
+    <main class="main-section">
+        <div class="main-top">
+            <h3 class="logo-text">With expense tracker we help you in keeping a record of your daily expenses so that you can plan your finances, never go over the budget or break your head trying to remember an expense you forgot which can really mess up the balance sheet. </h3>
+            <img class="logo-img"src="https://media.giphy.com/media/l2YOp5fNAFMp63B3a/giphy.gif" alt="gif">
+        </div>
+        <div class="form-list">
+            <div class="expenses">
+                <form action="">
+                    <input placeholder="year" id="year-field" type="number">
+                    <button class="button-get-expense" onclick="getExpenses(event)"type="submit">Submit</button>
+                </form>
+                <!-- <ul id="expense-list">
+                </ul> -->
+                <h2 id="date-head"></h2>
+                <h1 id="expenses-heading">Expenses</h1>
+                <table id="expense-table">
+                    <th>Date</th>
+                    <th>Description</th>
+                    <th>Category</th>
+                    <th>Income</th>
+                    <th>Expense</th>
+                </table>
+                <p id="net-money"></p>
+                <div id="pagination"></div>
+                <div class="number-rows-section">
+                    <form id="number-expenses-form" action="POST">
+                        <label for="number-fields" id="number-fields-label">Number of rows:</label>
+                        <input id="number-fields" type="number">
+                        <button type="submit" id="number-fields-submit">Get</button>
+                    </form>
+                </div>
+                <div class="report-container">
+                    <button id="report-button">PDF</button>
+                </div>
+            </div>
+            <h1 id="leaderboard-heading"></h1>
+            <table id="leaderboard-table">
+                    <th id="leaderboard-head">Rank</th>
+                    <th id="leaderboard-head">Name</th>
+                    <th id="leaderboard-head">Expenses</th>
+            </table>
+            <a style="text-align:center" id="downloads-link" href="downloads.html">Click here to see previously downloaded reports</a>
+        </div>
+    </main>
+    <footer>
+        <div class="footer-div-left">
+            <img class="footer-img" src="footer-left.png"/>
+        </div>
+        <div class="footer-div-center">
+            <h3 class="footer-text">Expense tracker is an open source application created in 2023. It is inspired by the app "Day to Day Expenses" and created as a portfolio project.</h3>
+            <div class="links">
+                <a class="footer-link" href="expense-main.html">Home</a>
+                <a id="daily-footer" class="footer-link" href="daily.html">Daily</a>
+                <a id="monthly-footer" class="footer-link monthly-footer" href="monthly.html">Monthly</a>
+                <a id="yearly-footer" class="footer-link yearly-footer" href="yearly.html">Yearly</a>
+            </div>
+        </div>
+        <div class="footer-div-right">
+            <img class="footer-img" src="money-sack.png"/>
+        </div>
+    </footer>
+    <div class="copyright">
+        <p>@❤️ritikGangwar</p>
+    </div>
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="yearly.js"></script>
+</body>
+</html>

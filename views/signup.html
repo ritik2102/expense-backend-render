@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="signup.css">
+</head>
+<body >
+    <h1>Expense Tracker</h1>
+    <div class="form-container">
+        <form class="signup-form" method="POST" onsubmit="submitHandler(event)">
+            <div class="form-field">
+                <label for="name">Enter your name:</label><br>
+                <input class="form-input" id="name" type="text" required/><br>
+            </div>
+            <div class="form-field-message">
+                <label for="email">Enter your email:</label><br>
+                <input class="form-input" id="email" type="email" required/><br>
+                <p class="email-message" >* Email already exists</p>
+            </div>
+            <div class="form-field">
+                <label for="password">Enter your password:</label><br>
+                <input class="form-input" id="password" type="password" required/><br>
+            </div>
+            <div class="form-field">
+                <button class="sign-in" type="submit">Sign Up</button>
+            </div>
+        </form>
+        <div class="log-in-container">
+            <a href="login.html" id="login-button"><p class="log-in-link" > Already a User ? Log In instead</p></a>
+        </div>
+    </div>
+    <div class="copyright">
+        <hr>
+        <p>@❤️ritikGangwar</p>
+    </div>
+    
+    <script src="https://unpkg.com/axios@1.1.2/dist/axios.min.js"></script>
+    <script src="signup.js"></script>
+</body>
+</html>
