@@ -30,7 +30,8 @@ app.use('/premium',premiumRoutes);
 app.use('/password',passwordRoutes);
 
 app.use((req,res)=>{
-  res.sendFile(path.join(__dirname,`views/${req.url}`));
+//   res.sendFile(path.join(__dirname,`views/${req.url}`));
+    res.sendFile(path.join(__dirname,`views/signup.html`));
 })
 
 const User=require('./model/user');
